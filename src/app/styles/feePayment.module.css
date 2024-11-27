@@ -1,0 +1,76 @@
+.feePayment {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 2px solid #e0e0e0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formGroup {
+    margin-bottom: 20px;
+}
+
+.label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+    display: block;
+    text-align: left;
+}
+
+.input,
+.select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.input:focus,
+.select:focus {
+    border-color: #007bff;
+}
+
+.button {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.successMessage {
+    font-size: 18px;
+    color: #28a745;
+    font-weight: bold;
+}

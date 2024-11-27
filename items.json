@@ -1,0 +1,41 @@
+{
+    "items": [
+      {
+        "id": 1,
+        "topic": "room",
+        "imgSrc": "/images/dormitory1.jpg",
+        "description": "Room 1 description"
+      },
+      {
+        "id": 2,
+        "topic": "room",
+        "imgSrc": "/images/room4.jfif",
+        "description": "Room 2 description"
+      },
+      {
+        "id": 3,
+        "topic": "room",
+        "imgSrc": "/images/room2.jfif",
+        "description": "Room 3 description"
+      },
+      {
+        "id": 4,
+        "topic": "room",
+        "imgSrc": "/images/room3.jfif",
+        "description": "Room 3 description"
+      },
+      {
+        "id": 5,
+        "topic": "room",
+        "imgSrc": "/images/room5.jfif",
+        "description": "Room 3 description"
+      },
+      {
+        "id": 6,
+        "topic": "room",
+        "imgSrc": "/images/room6.jfif",
+        "description": "Room 3 description"
+      }
+
+    ]
+}

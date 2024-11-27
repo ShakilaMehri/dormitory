@@ -1,0 +1,109 @@
+{
+  "galleryItems": [
+    {
+      "id": 1,
+      "topic": "library",
+      "imgSrc": "/images/library1.jfif"
+    },
+    {
+      "id": 2,
+      "topic": "library",
+      "imgSrc": "/images/library2.jfif"
+    },
+    {
+      "id": 3,
+      "topic": "library",
+      "imgSrc": "/images/library3.jfif"
+    },
+    {
+      "id": 4,
+      "topic": "library",
+      "imgSrc": "/images/library4.jfif"
+    },
+    {
+      "id": 5,
+      "topic": "library",
+      "imgSrc": "/images/library5.jfif"
+    },
+    {
+      "id": 6,
+      "topic": "library",
+      "imgSrc": "/images/library6.jfif"
+    },
+    {
+      "id": 7,
+      "topic": "library",
+      "imgSrc": "/images/library7.jfif"
+    },
+    {
+      "id": 8,
+      "topic": "room",
+      "imgSrc": "/images/room1.jfif"
+    },
+    {
+      "id": 9,
+      "topic": "room",
+      "imgSrc": "/images/room2.jfif"
+    },
+    {
+      "id": 10,
+      "topic": "room",
+      "imgSrc": "/images/room3.jfif"
+    },
+    {
+      "id": 11,
+      "topic": "room",
+      "imgSrc": "/images/room4.jfif"
+    },
+    {
+      "id": 12,
+      "topic": "room",
+      "imgSrc": "/images/room5.jfif"
+    },
+    {
+      "id": 13,
+      "topic": "room",
+      "imgSrc": "/images/room6.jfif"
+    },
+    {
+      "id": 14,
+      "topic": "room",
+      "imgSrc": "/images/room7.jfif"
+    },
+    {
+      "id": 15,
+      "topic": "dining",
+      "imgSrc": "/images/dining1.jfif"
+    },
+    {
+      "id": 16,
+      "topic": "dining",
+      "imgSrc": "/images/dining2.jfif"
+    },
+    {
+      "id": 17,
+      "topic": "dining",
+      "imgSrc": "/images/dining3.jfif"
+    },
+    {
+      "id": 18,
+      "topic": "dining",
+      "imgSrc": "/images/dining4.jfif"
+    },
+    {
+      "id": 19,
+      "topic": "dining",
+      "imgSrc": "/images/dining5.jfif"
+    },
+    {
+      "id": 20,
+      "topic": "dining",
+      "imgSrc": "/images/dining6.jfif"
+    },
+    {
+      "id": 21,
+      "topic": "dining",
+      "imgSrc": "/images/dining7.jfif"
+    }
+  ]
+}

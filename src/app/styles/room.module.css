@@ -1,0 +1,60 @@
+.main {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.title {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.subtitle {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.roomContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.roomCard {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.roomCard:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.roomImage {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.roomDetails {
+    padding: 15px;
+}
+
+.roomTitle {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.roomDescription {
+    font-size: 16px;
+    color: #666;
+}
