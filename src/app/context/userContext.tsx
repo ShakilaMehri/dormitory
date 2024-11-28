@@ -21,7 +21,7 @@ export const UserProvider = ({ children}: { children: ReactNode }) => {
         () => JSON.parse(localStorage.getItem("user") || "null")
     );
     const [rememberMe, setRememberMe] = useState<boolean>(
-        !!localStorage.getItem("user")
+        localStorage.getItem("user") ? true : false 
     );
 
     const login = (userName: string, remember: boolean) => {
