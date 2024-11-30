@@ -1,0 +1,45 @@
+.userManager {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.userIcon {
+    font-size: 24px;
+    color: #333;
+}
+
+.managerMenu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 10px;
+    z-index: 100;
+    min-width: 150px;
+}
+
+.managerMenu p {
+    margin: 0;
+    color: #555;
+    font-size: 14px;
+}
+
+.managerMenu button {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.managerMenu button:hover {
+    background: #0056b3;
+}
