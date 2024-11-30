@@ -1,4 +1,5 @@
 import React from "react";
+import UserManager from "./userManager";
 import styles from "../styles/header.module.css";
 
 const Header = () => {
@@ -26,6 +27,7 @@ const Header = () => {
              </li>
         </ul>
       </nav>
+      <UserManager/>
 
       {/* Authentication Links */}
       <div className={styles.authLinks}>
