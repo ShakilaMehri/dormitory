@@ -1,26 +1,36 @@
 "use client";
 
 import React, { useState } from "react";
-import { useUser } from "../context/userContext";
+import { useAtom } from "jotai";
+import { userAtom, rememberMeAtom } from "../context/atoms";
 import styles from "../styles/login.module.css";
 import Footer from "../components/footer";
 import Header from "../components/header";
 
 const Page = () => {
-  const { login } = useUser();
+  const [user, setUser] = useAtom(userAtom);
+  const [rememberMe, setRememberMe] = useAtom(rememberMeAtom);
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
-  const [rememberMe, setRememberMe] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (userName && password) {
-      login(userName, rememberMe);
-      alert("Login successful!");
-    } else {
+    if (!userName || !password) {
       alert("Please enter valid credentials!");
+      return;
     }
+
+    const userData = {userName};
+    setUser(userData);
+    setRememberMe(rememberMe);
+
+    if (rememberMe) {
+      localStorage.setItem("user", JSON.stringify(userData));
+    } else {
+      localStorage.removeItem("user");
+    }
+    alert(`Welcome, ${userName}!`)
   };
 
   return (
