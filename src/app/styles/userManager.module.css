@@ -1,4 +1,4 @@
-.userManager {
+.userManagerContainer {
     position: relative;
     display: inline-block;
     cursor: pointer;
@@ -7,39 +7,59 @@
 .userIcon {
     font-size: 24px;
     color: #333;
+    transition: color 0.3s ease;
 }
 
-.managerMenu {
+.userIcon:hover {
+    color: #007bff;
+}
+
+.userManagerMenu {
     position: absolute;
-    top: 100%;
+    top: 40px;
     right: 0;
     background: #fff;
     border: 1px solid #ddd;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    border-radius: 4px;
     padding: 10px;
     z-index: 100;
     min-width: 150px;
+    text-align: center;
 }
 
 .managerMenu p {
-    margin: 0;
-    color: #555;
+    margin: 0 0 10px 0;
+    color: #333;
     font-size: 14px;
 }
 
-.managerMenu button {
-    display: block;
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    background: #007bff;
+.logoutBtn {
+    background-color: #ff4d4f;
     color: #fff;
     border: none;
     border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 14px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.managerMenu button:hover {
-    background: #0056b3;
+.logoutBtn:hover {
+    background-color: #d9363e;
+}
+
+.loginBtn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.loginBtn:hover {
+    background-color: #0056b3;
 }
