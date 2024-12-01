@@ -29,12 +29,6 @@ const Header = () => {
       </nav>
       <UserManager/>
 
-      {/* Authentication Links */}
-      <div className={styles.authLinks}>
-        <a href="/login" className={styles.authLink}>Login</a>
-        <a href="/signup" className={styles.authLink + "" + styles.signup}></a>
-      </div>
-
       {/* Mobile Menu Button */}
       <div className={styles.menuButton}>
         <span className={styles.bar}></span>
