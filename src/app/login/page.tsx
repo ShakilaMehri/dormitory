@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { useAtom } from "jotai";
+import { useRouter } from "next/navigation";
 import { userAtom, rememberMeAtom } from "../context/atoms";
 import styles from "../styles/login.module.css";
 import Footer from "../components/footer";
@@ -12,6 +13,7 @@ const Page = () => {
   const [rememberMe, setRememberMe] = useAtom(rememberMeAtom);
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
+  const router = useRouter();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -31,6 +33,7 @@ const Page = () => {
       localStorage.removeItem("user");
     }
     alert(`Welcome, ${userName}!`)
+    router.push("/")
   };
 
   return (
