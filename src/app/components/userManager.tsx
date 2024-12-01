@@ -2,14 +2,16 @@
 
 import React, { useEffect, useState } from "react";
 import { useAtom } from "jotai";
+import { useRouter } from "next/navigation";
 import { userAtom, rememberMeAtom } from "../context/atoms";
 import styles from "../styles/userManager.module.css";
-import { FaUser } from "react-icons/fa";
+import { BiUser } from "react-icons/bi";
 
 const UserManager = () => {
   const [user, setUser] = useAtom(userAtom);
   const [rememberMe, setRememberMe] = useAtom(rememberMeAtom);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     try {
@@ -23,41 +25,39 @@ const UserManager = () => {
     }
   }, [setUser, setRememberMe]);
 
-  const login = (userName: string, remember: boolean) => {
-    const userData = { userName };
-    setUser(userData);
-    setRememberMe(remember);
-    if (remember) {
-      localStorage.setItem("user", JSON.stringify(userData));
-    } else {
-      localStorage.removeItem("user");
-    }
-    alert(`Welcome ${userName}!`);
-  };
-
   const logout = () => {
     setUser(null);
     setRememberMe(false);
     localStorage.removeItem("user");
-    alert("You have successfully loged out.");
+    alert("You have successfully logged out.");
+    router.push("/");
   };
 
   return (
-    <div className={styles.userManager} 
-    onMouseEnter={() => setIsDropdownOpen(true)}
-    onMouseLeave={() => setIsDropdownOpen(false)}
+    <div
+      onMouseEnter={() => setIsDropdownOpen(true)}
+      onMouseLeave={() => setIsDropdownOpen(false)}
+      className={styles.userManagerContainer}
     >
-      <FaUser className={styles.userIcon}/>
-      {isDropdownOpen &&(
-        <div className={styles.managerMenu}>
- <p>User: {user?.userName || "Guest"}</p>
-      <p>Remember Me: {rememberMe ? "Yes" : "No"}</p>
-      <button
-        onClick={() => login("Shakila", true)}>
-        Login
-      </button>
-      <button onClick={logout}>Logout</button>
-        </div>
+      {user ? (
+        <>
+          <BiUser className={styles.userIcon} />
+          {isDropdownOpen && (
+            <div className={styles.userManagerMenu}>
+              <p>Welcome, {user.userName}</p>
+              <button onClick={logout} className={styles.logoutBtn}>
+                Logout
+              </button>
+            </div>
+          )}
+        </>
+      ) : (
+        <button
+          onClick={() => router.push("/login")}
+          className={styles.loginBtn}
+        >
+          Login
+        </button>
       )}
     </div>
   );
