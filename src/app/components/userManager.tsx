@@ -3,13 +3,12 @@
 import React, { useEffect, useState } from "react";
 import { useAtom } from "jotai";
 import { useRouter } from "next/navigation";
-import { userAtom, rememberMeAtom } from "../context/atoms";
+import { userAtom} from "../context/atoms";
 import styles from "../styles/userManager.module.css";
 import { BiUser } from "react-icons/bi";
 
 const UserManager = () => {
   const [user, setUser] = useAtom(userAtom);
-  const [rememberMe, setRememberMe] = useAtom(rememberMeAtom);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const router = useRouter();
 
@@ -18,16 +17,14 @@ const UserManager = () => {
       const savedUser = localStorage.getItem("user");
       if (savedUser) {
         setUser(JSON.parse(savedUser));
-        setRememberMe(true);
       }
     } catch (error) {
       console.error("Error loading user from localStorage:", error);
     }
-  }, [setUser, setRememberMe]);
+  }, [setUser]);
 
   const logout = () => {
     setUser(null);
-    setRememberMe(false);
     localStorage.removeItem("user");
     alert("You have successfully logged out.");
     router.push("/");
@@ -44,7 +41,7 @@ const UserManager = () => {
           <BiUser className={styles.userIcon} />
           {isDropdownOpen && (
             <div className={styles.userManagerMenu}>
-              <p>Welcome, {user.userName}</p>
+              <p>{user.userName}</p>
               <button onClick={logout} className={styles.logoutBtn}>
                 Logout
               </button>
